@@ -1,8 +1,8 @@
 import React, { forwardRef, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Popup, Icon, Toast, Keyboard, Modal, Input  } from 'zarm';
+import { Popup, Icon, Toast, Keyboard, Modal, Input } from 'zarm';
 import cx from 'classnames'
-import dayjs from 'dayjs'; 
+import dayjs from 'dayjs';
 import CustomIcon from '../CustomIcon'
 import PopupDate from '../PopupDate'
 import { get, typeMap, post } from '@/utils'
@@ -21,7 +21,7 @@ const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
   const [remark, setRemark] = useState(''); // 备注
   const [showRemark, setShowRemark] = useState(false); // 备注输入框
   const [date, setDate] = useState(new Date()); // 日期
- 
+
 
   useEffect(() => {
     if (detail.id) {
@@ -53,7 +53,7 @@ const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
     const _income = list.filter(i => i.type == 2); // 收入类型
     setExpense(_expense);
     setIncome(_income);
-      // 没有 id 的情况下，说明是新建账单。
+    // 没有 id 的情况下，说明是新建账单。
     if (!id) {
       setCurrentType(_expense[0]);
     };
@@ -88,7 +88,7 @@ const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
   // 监听输入框改变值
   const handleMoney = (value) => {
     value = String(value)
-    if (value == 'close') return 
+    if (value == 'close') return
     // 点击是删除按钮时
     if (value == 'delete') {
       let _amount = amount.slice(0, amount.length - 1)
@@ -165,7 +165,7 @@ const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
         <div className={s.typeBody}>
           {
             (payType == 'expense' ? expense : income).map(item => <div onClick={() => choseType(item)} key={item.id} className={s.typeItem}>
-              <span className={cx({[s.iconfontWrap]: true, [s.expense]: payType == 'expense', [s.income]: payType == 'income', [s.active]: currentType.id == item.id})}>
+              <span className={cx({ [s.iconfontWrap]: true, [s.expense]: payType == 'expense', [s.income]: payType == 'income', [s.active]: currentType.id == item.id })}>
                 <CustomIcon className={s.iconfont} type={typeMap[item.id].icon} />
               </span>
               <span>{item.name}</span>
@@ -182,7 +182,7 @@ const PopupAddBill = forwardRef(({ detail = {}, onReload }, ref) => {
             type="text"
             rows={3}
             value={remark}
-            placeholder="请输入备注信息"
+            placeholder="添加备注"
             onChange={(val) => setRemark(val)}
             onBlur={() => setShowRemark(false)}
           /> : <span onClick={() => setShowRemark(true)}>{remark || '添加备注'}</span>

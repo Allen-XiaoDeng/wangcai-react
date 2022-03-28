@@ -1,6 +1,6 @@
 import React from 'react';
 import { Cell, Input, Button, Toast } from 'zarm';
-import { createForm  } from 'rc-form';
+import { createForm } from 'rc-form';
 import Header from '@/components/Header'
 import { post } from '@/utils'
 
@@ -32,7 +32,7 @@ const Account = (props) => {
   }
 
   return <>
-    <Header title="重制密码" />
+    <Header title="修改密码" />
     <div className={s.account}>
       <div className={s.form}>
         <Cell title="原密码">

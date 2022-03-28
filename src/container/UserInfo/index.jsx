@@ -29,7 +29,7 @@ const UserInfo = () => {
   const handleSelect = (file) => {
     console.log('file.file', file.file)
     if (file && file.file.size > 200 * 1024) {
-      Toast.show('上传头像的大小不得超过 200 KB！！')
+      Toast.show('上传头像不得超过 200 KB！！')
       return
     }
     let formData = new FormData()
@@ -64,7 +64,7 @@ const UserInfo = () => {
       <div className={s.item}>
         <div className={s.title}>头像</div>
         <div className={s.avatar}>
-          <img className={s.avatarUrl} src={avatar} alt="" />
+          <img className={s.avatarUrl} src={avatar} alt=""/>
           <div className={s.desc}>
             <span>支持 jpg、png、jpeg 格式大小 200KB 以内的图片</span>
             <FilePicker className={s.filePicker} onChange={handleSelect} accept="image/*">
@@ -80,7 +80,7 @@ const UserInfo = () => {
             clearable
             type="text"
             value={signature}
-            placeholder="这个人很懒，什么都没留下"
+            placeholder="请输入个性签名"
             onChange={(value) => setSignature(value)}
           />
         </div>
