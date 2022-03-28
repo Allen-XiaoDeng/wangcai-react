@@ -32,7 +32,7 @@ const User = () => {
     setUser(data);
     setShow(false);
     Toast.show('修改成功');
-  } ;
+  };
 
   // 退出登录
   const logout = async () => {
@@ -43,41 +43,41 @@ const User = () => {
   return <div className={s.user}>
     <div className={s.head}>
       <div className={s.info}>
-        <span>昵称：{ user.username }</span>
+        <span>昵称：{user.username}</span>
         <span>
           <img style={{ width: 30, height: 30, verticalAlign: '-10px' }} src="//s.yezgea02.com/1615973630132/geqian.png" alt="" />
-          <b>{ user.signature || '暂无内容' }</b>
+          <b>{user.signature || '暂无内容'}</b>
         </span>
       </div>
       <img className={s.avatar} style={{ width: 60, height: 60, borderRadius: 8 }} src={avatar} alt="" />
-   </div>
-   <div className={s.content}>
-    <Cell
-      hasArrow
-      title="用户信息修改"
-      onClick={() => history.push('/userinfo')}
-      icon={<img style={{ width: 20, verticalAlign: '-7px' }} src="//s.yezgea02.com/1615974766264/gxqm.png" alt="" />}
-    />
-    <Cell
-      hasArrow
-      title="重制密码"
-      onClick={() => history.push('/account')}
-      icon={<img style={{ width: 20, verticalAlign: '-7px' }} src="//s.yezgea02.com/1615974766264/zhaq.png" alt="" />}
-    />
-    {/* <Cell
+    </div>
+    <div className={s.content}>
+      <Cell
+        hasArrow
+        title="用户信息修改"
+        onClick={() => history.push('/userinfo')}
+        icon={<img style={{ width: 20, verticalAlign: '-7px' }} src="//s.yezgea02.com/1615974766264/gxqm.png" alt="" />}
+      />
+      <Cell
+        hasArrow
+        title="重制密码"
+        onClick={() => history.push('/account')}
+        icon={<img style={{ width: 20, verticalAlign: '-7px' }} src="//s.yezgea02.com/1615974766264/zhaq.png" alt="" />}
+      />
+      {/* <Cell
       hasArrow
       title="我的标签"
       icon={<img style={{ width: 20, verticalAlign: '-7px' }} src="//s.yezgea02.com/1619321650235/mytag.png" alt="" />}
     /> */}
-    <Cell
-      hasArrow
-      title="关于我们"
-      onClick={() => history.push('/about')}
-      icon={<img style={{ width: 20, verticalAlign: '-7px' }} src="//s.yezgea02.com/1615975178434/lianxi.png" alt="" />}
-    />
-   </div>
-   <Button className={s.logout} block theme="danger" onClick={logout}>退出登录</Button>
-   <Modal
+      <Cell
+        hasArrow
+        title="关于我们"
+        onClick={() => history.push('/about')}
+        icon={<img style={{ width: 20, verticalAlign: '-7px' }} src="//s.yezgea02.com/1615975178434/lianxi.png" alt="" />}
+      />
+    </div>
+    <Button className={s.logout} block theme="danger" onClick={logout}>退出登录</Button>
+    <Modal
       visible={show}
       title="标题"
       closable
@@ -88,7 +88,7 @@ const User = () => {
         </Button>
       }
     >
-    <Input
+      <Input
         autoHeight
         showLength
         maxLength={50}
@@ -97,7 +97,7 @@ const User = () => {
         value={signature}
         placeholder="请输入备注信息"
         onChange={(val) => setSignature(val)}
-        />
+      />
     </Modal>
   </div>
 };

@@ -64,7 +64,7 @@ const UserInfo = () => {
       <div className={s.item}>
         <div className={s.title}>头像</div>
         <div className={s.avatar}>
-          <img className={s.avatarUrl} src={avatar} alt=""/>
+          <img className={s.avatarUrl} src={avatar} alt="" />
           <div className={s.desc}>
             <span>支持 jpg、png、jpeg 格式大小 200KB 以内的图片</span>
             <FilePicker className={s.filePicker} onChange={handleSelect} accept="image/*">
@@ -80,7 +80,7 @@ const UserInfo = () => {
             clearable
             type="text"
             value={signature}
-            placeholder="请输入个性签名"
+            placeholder="这个人很懒，什么都没留下"
             onChange={(value) => setSignature(value)}
           />
         </div>
