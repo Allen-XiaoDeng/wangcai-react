@@ -60,7 +60,7 @@ const User = () => {
       />
       <Cell
         hasArrow
-        title="重制密码"
+        title="修改密码"
         onClick={() => history.push('/account')}
         icon={<img style={{ width: 20, verticalAlign: '-7px' }} src="//s.yezgea02.com/1615974766264/zhaq.png" alt="" />}
       />

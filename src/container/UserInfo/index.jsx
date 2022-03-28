@@ -29,7 +29,7 @@ const UserInfo = () => {
   const handleSelect = (file) => {
     console.log('file.file', file.file)
     if (file && file.file.size > 200 * 1024) {
-      Toast.show('上传头像不得超过 200 KB！！')
+      Toast.show('上传头像的大小不得超过 200 KB！！')
       return
     }
     let formData = new FormData()
