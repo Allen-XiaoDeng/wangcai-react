@@ -7,7 +7,7 @@ module.exports = {
   ],
   deploy: {
     production: {
-      user: 'ubuntu',
+      user: 'root',
       host: '42.192.91.89',
       ref: 'origin/main',
       repo: 'git@github.com:Allen-XiaoDeng/wangcai-react.git',
