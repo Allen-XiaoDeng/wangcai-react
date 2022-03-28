@@ -1,6 +1,6 @@
 {
   "name": "wangcai-react",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "scripts": {
     "dev": "vite --mode development",
     "build": "vite build --mode release",
