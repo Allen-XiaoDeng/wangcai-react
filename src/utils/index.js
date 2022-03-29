@@ -79,7 +79,7 @@ export const imgUrlTrans = (url) => {
   if (url && url.startsWith('http')) {
     return url
   } else {
-    url = `${MODE == 'development' ? 'http://guolong.xyz' : baseUrl}${url}`
+    url = `${MODE == 'development' ? 'http://guolong.xyz:7009' : baseUrl}${url}`
     return url
   }
 }
