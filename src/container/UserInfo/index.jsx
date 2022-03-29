@@ -36,7 +36,7 @@ const UserInfo = () => {
     formData.append('file', file.file)
     axios({
       method: 'post',
-      url: `${baseUrl}/api/upload`,
+      url: `${baseUrl}/upload`,
       data: formData,
       headers: {
         'Content-Type': 'multipart/form-data',
@@ -64,7 +64,7 @@ const UserInfo = () => {
       <div className={s.item}>
         <div className={s.title}>头像</div>
         <div className={s.avatar}>
-          <img className={s.avatarUrl} src={avatar} alt=""/>
+          <img className={s.avatarUrl} src={avatar} alt="" />
           <div className={s.desc}>
             <span>支持 jpg、png、jpeg 格式大小 200KB 以内的图片</span>
             <FilePicker className={s.filePicker} onChange={handleSelect} accept="image/*">
